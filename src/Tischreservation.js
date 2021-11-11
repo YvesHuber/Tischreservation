@@ -4,11 +4,13 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
+import Like from "./Like";
 
 function Tischreservation() {
   return (
     <div className="App">
       <header className="App-header">
+        <Like like="true" />
         <Container fluid>
           <Form>
             <Row>
@@ -62,18 +64,17 @@ function Tischreservation() {
                   />
                 </Form.Group>
               </Col>
-
               <Col>
-                <Row>
-                  <Col>
-                    <input className="form-control" Placeholder={"Uhrzeit"} />
-                  </Col>
-                </Row>
-                <Row>
-                  <Col>
-                    <input className="form-control" Placeholder={"Datum"} />
-                  </Col>
-                </Row>
+                <Form.Group controlId="formBasicDate">
+                  <Form.Label>Date</Form.Label>
+                  <Form.Control type="Date" />
+                </Form.Group>
+              </Col>
+              <Col>
+                <Form.Group controlId="formBasicTime">
+                  <Form.Label>Time</Form.Label>
+                  <Form.Control type="Time" />
+                </Form.Group>
               </Col>
             </Row>
 
