@@ -4,11 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Tischreservation from './Tischreservation';
+import Like from './Like';
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <Tischreservation />
+    <Like like={true} onChange={(v) => console.log(v)} />
   </React.StrictMode>,
   document.getElementById('root')
 );

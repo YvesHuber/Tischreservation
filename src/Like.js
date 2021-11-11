@@ -1,5 +1,5 @@
 import { HeartFill, Heart } from "react-bootstrap-icons"
-import useState from "react"
+import {useState, useEffect} from "react"
 
 
 export default function Like(props){
@@ -8,14 +8,18 @@ export default function Like(props){
     const [checked, setcheck] = useState(props.like)
 
 
+    useEffect(() =>{
+        props.onChange(checked)
+    }, [checked])
+
     return (
-        <div>
+        <>
             { checked
-               ? <HeartFill onClikc={ () => setcheck(!checked)}/>
-               : <Heart onClikc={() => setcheck(!checked)}/>
+               ? <HeartFill onClick={ () => setcheck(!checked)}/>
+               : <Heart onClick={() => setcheck(!checked)}/>
             }
 
-        </div>
+        </>
     )
 
 }

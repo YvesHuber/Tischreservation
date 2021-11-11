@@ -10,7 +10,7 @@ function Tischreservation() {
   return (
     <div className="App">
       <header className="App-header">
-        <Like like="true" />
+        <Like like={true}></Like>
         <Container fluid>
           <Form>
             <Row>
