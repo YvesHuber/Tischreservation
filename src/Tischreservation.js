@@ -4,13 +4,12 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
-import Like from "./Like";
+import Rating from "./Rating";
 
 function Tischreservation() {
   return (
     <div className="App">
       <header className="App-header">
-        <Like like={true}></Like>
         <Container fluid>
           <Form>
             <Row>
@@ -103,6 +102,7 @@ function Tischreservation() {
             <br />
           </Form>
         </Container>
+        <Rating></Rating>
       </header>
     </div>
   );

@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Tischreservation from './Tischreservation';
-import Like from './Like';
+
+import Rating from './Rating';
+import NumberSpinner from './NumberSpinner';
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <Like like={true} onChange={(v) => console.log(v)} />
+    <NumberSpinner></NumberSpinner>
   </React.StrictMode>,
   document.getElementById('root')
 );
